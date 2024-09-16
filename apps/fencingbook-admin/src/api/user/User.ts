@@ -1,0 +1,30 @@
+import { JsonValue } from "type-fest";
+import { UserClub } from "../userClub/UserClub";
+import { UserProfile } from "../userProfile/UserProfile";
+import { UserRole } from "../userRole/UserRole";
+
+export type User = {
+  ageCategory: string | null;
+  birthDate: Date | null;
+  club: string | null;
+  country: string | null;
+  createdAt: Date;
+  email: string | null;
+  firstName: string | null;
+  gender: string | null;
+  id: string;
+  isVerified: boolean | null;
+  lastName: string | null;
+  passwordHash: string | null;
+  region: string | null;
+  roles: JsonValue;
+  screenName: string | null;
+  sportsLevel: string | null;
+  updatedAt: Date;
+  userClubs?: Array<UserClub>;
+  userProfiles?: Array<UserProfile>;
+  userRoles?: Array<UserRole>;
+  username: string;
+  verificationCode: string | null;
+  weaponType: string | null;
+};

@@ -1,0 +1,30 @@
+import { StringNullableFilter } from "../../util/StringNullableFilter";
+import { DateTimeNullableFilter } from "../../util/DateTimeNullableFilter";
+import { StringFilter } from "../../util/StringFilter";
+import { BooleanNullableFilter } from "../../util/BooleanNullableFilter";
+import { UserClubListRelationFilter } from "../userClub/UserClubListRelationFilter";
+import { UserProfileListRelationFilter } from "../userProfile/UserProfileListRelationFilter";
+import { UserRoleListRelationFilter } from "../userRole/UserRoleListRelationFilter";
+
+export type UserWhereInput = {
+  ageCategory?: StringNullableFilter;
+  birthDate?: DateTimeNullableFilter;
+  club?: StringNullableFilter;
+  country?: StringNullableFilter;
+  email?: StringNullableFilter;
+  firstName?: StringNullableFilter;
+  gender?: StringNullableFilter;
+  id?: StringFilter;
+  isVerified?: BooleanNullableFilter;
+  lastName?: StringNullableFilter;
+  passwordHash?: StringNullableFilter;
+  region?: StringNullableFilter;
+  screenName?: StringNullableFilter;
+  sportsLevel?: StringNullableFilter;
+  userClubs?: UserClubListRelationFilter;
+  userProfiles?: UserProfileListRelationFilter;
+  userRoles?: UserRoleListRelationFilter;
+  username?: StringFilter;
+  verificationCode?: StringNullableFilter;
+  weaponType?: StringNullableFilter;
+};
